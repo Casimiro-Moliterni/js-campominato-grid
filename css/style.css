@@ -1,3 +1,57 @@
-.red{
-    color: red;
+/* regole di base  */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+img {
+    max-width: 100%;
+}
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/* header  */
+header{
+    padding: 30px 30px;
+}
+.container-header{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.item-logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.img-logo{
+    height: 70px;
+}
+
+.btn{
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 10px 60px 5px 60px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+/* main  */
+main{
+    padding: 125px 0;
+    
+}
+
+
+/* footer  */
