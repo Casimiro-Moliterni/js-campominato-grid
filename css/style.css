@@ -50,8 +50,23 @@ header{
 /* main  */
 main{
     padding: 125px 0;
-    
+    background-color: #7fffd4;
 }
 
-
+.grid{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(20, 19, 19);
+    max-width: 1180px;
+}
+.box{
+        width: calc(100% / 10);
+        height: calc(100% / 10);
+        border: 2px solid black;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 /* footer  */
