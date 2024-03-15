@@ -17,7 +17,10 @@ body{
 
 /* header  */
 header{
-    padding: 30px 30px;
+   height: 130px;
+   display: flex;
+   align-items: center;
+   padding: 0 30px;
 }
 .container-header{
  width: 100%;
@@ -51,6 +54,7 @@ header{
 main{
     padding: 125px 0;
     background-color: #7fffd4;
+    height: calc(100vh - 200px);
 }
 
 .grid{
@@ -70,3 +74,19 @@ main{
         align-items: center;
 }
 /* footer  */
+
+footer{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+}
+.container-footer{
+    display: flex;
+    align-items: center;
+    gap:5px
+}
+
+.container-footer .hearts{
+    font-size: 20px;
+}
