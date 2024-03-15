@@ -14,3 +14,36 @@
 // Di cosa ho bisogno per generare i numeri?
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Trovate allegato gli screenshot con e senza bonus e il logo da usare nell'header.
+
+// botton di avvio partita 
+
+
+
+const GenBtn = document.querySelector('.btn');
+GenBtn.addEventListener('click',function(){
+    const mygrid = document.querySelector('.grid');
+    mygrid.innerHTML='';
+    for ( let i = 1 ; i <= 100 ; i++){
+       const newBox = generateGridbox(i);
+       mygrid.append(newBox);
+    
+    };
+});
+
+
+// Funzione che genera un quadrato
+// number -> numero che rappresenta un numero
+// return: elemento del dom che rappresenta un quadrato
+function generateGridbox(number){
+    const myDiv = document.createElement('div');
+    myDiv.classList.add('box');
+    myDiv.innerHTML = `<span>${number}</span>`;
+
+    // funzione al click del box
+    myDiv.addEventListener('click',function(){
+        this.classList.toggle('color-skyblue');
+        console.log('hai cliccato la cella numero :',number);
+    });
+    return myDiv;
+};
+
