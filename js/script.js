@@ -20,30 +20,38 @@
 
 
 const GenBtn = document.querySelector('.btn');
-GenBtn.addEventListener('click',function(){
+GenBtn.addEventListener('click', function () {
+
+    let myLevel = document.querySelector('#livello').value;
+    console.log(myLevel)
+
     const mygrid = document.querySelector('.grid');
-    mygrid.innerHTML='';
-    for ( let i = 1 ; i <= 100 ; i++){
-       const newBox = generateGridbox(i);
-       mygrid.append(newBox);
-    
+
+
+    for (let i = 1; i <= 100; i++) {
+        const newBox = generateGridbox(i);
+        mygrid.append(newBox);
     };
+
 });
 
 
 // Funzione che genera un quadrato
 // number -> numero che rappresenta un numero
 // return: elemento del dom che rappresenta un quadrato
-function generateGridbox(number){
+function generateGridbox(number) {
+
+
     const myDiv = document.createElement('div');
     myDiv.classList.add('box');
     myDiv.innerHTML = `<span>${number}</span>`;
 
     // funzione al click del box
-    myDiv.addEventListener('click',function(){
+    myDiv.addEventListener('click', function () {
         this.classList.toggle('color-skyblue');
-        console.log('hai cliccato la cella numero :',number);
+        console.log('hai cliccato la cella numero :', number);
     });
     return myDiv;
 };
 
+// funzione ciclo di 100
